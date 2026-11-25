@@ -6,9 +6,12 @@ A 3D-printable cap for the 1 oz needle-tip squeeze bottles used at the glassblow
 - **It can't roll.** The outside is square, so the bottle lies on a flat face instead of rolling off the bench.
 
 <p align="center">
-  <img src="docs/images/base.png" width="30%" alt="The base, pointed end up">
-  <img src="docs/images/assembly.png" width="28%" alt="The bottle sitting in the base">
-  <img src="docs/images/lying-on-table.png" width="38%" alt="Cut-away: the bottle seated in the base, lying on its side on a table">
+  <img src="docs/images/base.png" height="260" alt="The base, pointed end up">
+  &nbsp;&nbsp;&nbsp;
+  <img src="docs/images/assembly.png" height="420" alt="Cut-away: the bottle seated in the base">
+</p>
+<p align="center">
+  <img src="docs/images/lying-on-table.png" width="80%" alt="Cut-away: the bottle seated in the base, lying on its side on a table">
 </p>
 
 > [!WARNING]
@@ -23,6 +26,7 @@ A 3D-printable cap for the 1 oz needle-tip squeeze bottles used at the glassblow
 | [`design/bottle_reference.stl`](design/bottle_reference.stl) | The estimated bottle, for checking the fit in a slicer or viewer |
 | [`make_bottle_base.py`](make_bottle_base.py) | Script that builds the FreeCAD model and exports the STLs |
 | [`simulate.py`](simulate.py) | PyBullet physics test: standing up, random drops and rolling |
+| [`render_previews.py`](render_previews.py) | Redraws the pictures in this README from the FreeCAD model |
 
 ## The design
 
@@ -47,6 +51,14 @@ To rebuild everything from scratch, run the script in FreeCAD (**Macro → Macro
 freecadcmd -c "exec(open('make_bottle_base.py').read())"
 # Flatpak FreeCAD:
 flatpak run --command=freecadcmd org.freecad.FreeCAD -c "exec(open('make_bottle_base.py').read())"
+```
+
+Then redraw the README pictures (this needs FreeCAD's GUI, but runs without opening a window):
+
+```sh
+QT_QPA_PLATFORM=offscreen freecad render_previews.py
+# Flatpak FreeCAD:
+flatpak run --env=QT_QPA_PLATFORM=offscreen org.freecad.FreeCAD render_previews.py
 ```
 
 ## Fitting your bottle
