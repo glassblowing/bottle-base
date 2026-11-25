@@ -8,7 +8,7 @@ A 3D-printable cap for the 1 oz needle-tip squeeze bottles used at the glassblow
 <p align="center">
   <img src="docs/images/base.png" width="30%" alt="The base, pointed end up">
   <img src="docs/images/assembly.png" width="28%" alt="The bottle sitting in the base">
-  <img src="docs/images/on-its-side.png" width="38%" alt="The bottle and base lying on their side">
+  <img src="docs/images/lying-on-table.png" width="38%" alt="Cut-away: the bottle seated in the base, lying on its side on a table">
 </p>
 
 > [!WARNING]
